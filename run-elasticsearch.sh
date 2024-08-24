@@ -19,7 +19,7 @@ fi
 
 docker network create elastic
 
-NODE=${NODES-1}
+NODES=${NODES-1}
 for (( node=1; node<=$NODES; node++ ))
 do
   port=$((9200 + $node - 1))
