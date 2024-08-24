@@ -9,7 +9,7 @@ fi
 
 PLUGIN_INSTALL_CMD=""
 PLUGINS_STR=`echo ${PLUGINS} | sed -e 's/\n/ /g'`
-if [ -n "${PLUGINS_STR}"]; then
+if [ -n "${PLUGINS_STR}" ]; then
   ARRAY=(${PLUGINS_STR})
   for i in "${ARRAY[@]}"
   do
@@ -55,7 +55,7 @@ docker run \
   --retry-connrefused \
   --show-error \
   --silent \
-  https://es1:9200
+  http://es1:9200
 
 sleep 10
 
